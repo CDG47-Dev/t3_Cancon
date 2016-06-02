@@ -1,0 +1,38 @@
+<div class="body-bg{f:if(condition:settings.navigation.type, then:' body-bg-{settings.navigation.type}')}">
+    <f:link.page class="sr-only sr-only-focusable" section="content">
+        {f:translate(key: 'skiptomaincontent', extensionName: 'bootstrap_package')}
+    </f:link.page>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 bienvenue">
+        <f:cObject typoscriptObjectPath="lib.bienvenue"/> 
+      </div>
+      <div class="col-md-9 localisation">
+        <f:cObject typoscriptObjectPath="lib.localisation"/>
+      </div>
+    </div>
+
+    <div class="row">  
+      <div class="col-md-12">
+        <f:cObject typoscriptObjectPath="lib.bandeau"/>
+      </div>
+    </div>
+  </div>
+  
+    <f:render partial="Navigation/Main" arguments="{_all}"/>
+    <f:cObject typoscriptObjectPath="lib.navigation"/>
+  <div class="content">
+    <f:render partial="Navigation/Breadcrumb" arguments="{_all}"/>
+   
+
+    <div id="content" class="main-section">
+        <!--TYPO3SEARCH_begin-->
+        <section id="p{data.uid}" class="{pageClass}">
+            <f:render section="Main"/>
+        </section>
+        <!--TYPO3SEARCH_end-->
+    </div>
+
+    <f:render partial="Structure/Footer" arguments="{_all}"/>
+  </div>
+</div>
