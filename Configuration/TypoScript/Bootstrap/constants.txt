@@ -1,1 +1,14 @@
-
+plugin.bootstrap_package {
+    settings {
+        less {
+              navbar-height = 20px
+              navbar-default-bg = #6b993a
+              navbar-default-color = #fff
+              navbar-default-link-active-color = white
+              font-size-base = 14px
+              font-family-sans-serif = "Open Sans", Helvetica, Arial, sans-serif
+              footerColor = #FFF;
+              footerColorText = #000;
+             }
+    }
+}
