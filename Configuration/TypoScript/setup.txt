@@ -1,0 +1,26 @@
+page = PAGE
+page {
+    10 {
+		templateName = TEXT
+        templateName.stdWrap.cObject = CASE
+        templateName.stdWrap.cObject{			
+            pagets__default_subnav_left_3columns = TEXT
+            pagets__default_subnav_left_3columns.value = DefaultSubNavLeft3Columns
+      
+        }
+	}
+	  
+	templateRootPath{
+		0 = EXT:test/Resources/Private/Templates/Page/
+		1 = {$page.fluidtemplate.templateRootPath}
+	}
+    layoutRootPath{
+		0 = EXT:test/Resources/Private/Layouts/Page/
+		1 = {$page.fluidtemplate.layoutRootPath}		
+	}
+	
+    partialRootPath{
+		0 = EXT:test/Resources/Private/Partials/Page/
+		1 = {$page.fluidtemplate.partialRootPath}
+	} 
+  }
