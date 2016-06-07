@@ -1,0 +1,7 @@
+page{
+	fluidtemplate {
+		templateRootPath = EXT:test/Resources/Private/Templates/Page/
+		layoutRootPath = EXT:test/Resources/Private/Layouts/Page/
+		partialRootPath = EXT:test/Resources/Private/Partials/Page/
+
+}
