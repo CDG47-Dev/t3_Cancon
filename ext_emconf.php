@@ -15,7 +15,9 @@ $EM_CONF[$_EXTKEY] = array(
     'category' => 'fe',
     'constraints' => array(
         'depends' => array(
+            'bootstrap_package' => '7.0.2 - 8.99.99',
             'typo3' => '7.6.2 - 8.99.99',
+	    'indexed_search' => '7.6.0 - 8.99.99',
 			
         ),
         'conflicts' => array(),
