@@ -5,4 +5,19 @@ page{
 		partialRootPath = EXT:test/Resources/Private/Partials/Page/
 	
 	}
+	bandeau = 1
+
+	localisation {
+             	cc_url = http://www.ccbastides47.com/
+				cc_title = vers le site de Bastides en Haut-Agenais Périgord
+				cc_text = Bastides en Haut-Agenais Périgord 
+        commune_url = http://www.cancon.fr/
+        commune_title = vers l'accueil site de Cancon
+        commune_text =  Cancon
+        }  
+	
+	bienvenue {
+		msg = bienvenue sur le site officiel de la commune
+        }
+	
 }
