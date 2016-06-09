@@ -1,29 +1,51 @@
 page = PAGE
 page{
 
-    10 = FLUIDTEMPLATE
+	10 = FLUIDTEMPLATE
     10 {
-	templateName = TEXT
+		templateName = TEXT
         templateName.stdWrap.cObject = CASE
         templateName.stdWrap.cObject{			
-        	pagets__default_subnav_left_3columns = TEXT
-        	pagets__default_subnav_left_3columns.value = DefaultSubNavLeft3Columns
+            pagets__default_subnav_left_3columns = TEXT
+            pagets__default_subnav_left_3columns.value = DefaultSubNavLeft3Columns
+      
         }
-        variables{
-		#copyright
-		themeCopyright= TEXT
-		themeCopyright.value = {$page.theme.copyright.enable}
-		themeCopyrightText = COA
-		themeCopyrightText{
-			10 = TEXT
-			10{
-				data = date:U
-				strftime = %Y
-				wrap = <span>&copy; {$page.theme.copyright.text} &nbsp; |</span>
+		variables {
+				#copyright
+				themeCopyright= TEXT
+				themeCopyright.value = {$page.theme.copyright.enable}
+				themeCopyrightText = COA
+				themeCopyrightText{
+					10 = TEXT
+					10{
+						data = date:U
+						strftime = %Y
+						wrap = <span>&copy; {$page.theme.copyright.text} &nbsp; |</span>
+					}
+				}		 
+		}
+		
+		##########################
+		### DATA PREPROCESSING ###
+		##########################
+		dataProcessing {
+			50 = BK2K\BootstrapPackage\DataProcessing\MenuProcessor
+			50 {
+				special = directory
+                special.value = {$page.footer.navdir}
+				includeNotInMenu = {$page.footer.notinmenu}
+                excludeUidList = {$page.footer.excludelist}
+				as = footernavigation
 			}
-		}		 
-	     }
-}
+			
+			60 = BK2K\BootstrapPackage\DataProcessing\MenuProcessor
+			60 {
+				levels = {$page.sitemapnav.levels}
+				excludeUidList = {$page.sitemapnav.excludelist}
+				as = sitemapnavigation
+			}      
+		}
+	}
 	  
 	templateRootPath{
 		0 = EXT:bootstrap_package/Resources/Private/Templates/Page/
@@ -40,130 +62,130 @@ page{
 		0 = EXT:bootstrap_package/Resources/Private/Partials/Page/
 		1 = EXT:test/Resources/Private/Partials/Page/
 		2 = {$page.fluidtemplate.partialRootPath}
-	} 
+	}
+}	
 
-#bienvenue
-lib.bienvenue= TEXT
-lib.bienvenue.wrap =<p>|</p>
-lib.bienvenue.value= {$page.bienvenue.msg}
-
-
-#localisation
-lib.localisation = TEXT
-lib.localisation.wrap =<div class="header-links"><ul class="nav navbar-nav">|</ul></div>
-lib.localisation.value(
-    <li>
-      <a target="_blank" title="vers le site de l'Union européenne" href="http://europa.eu/index_fr.htm">
-        <i title="" class="glyphicon glyphicon-globe" data-original-title="Europe"></i>
-        <span class="hidden-sm hidden-xs">
-          Europe
-        </span>
-      </a>
-    </li>
-    <li>
-      <a target="_blank" title="vers le site France.fr" href="http://www.france.fr">
-        <i title="" class="glyphicon glyphicon-globe" data-original-title="France"></i>
-        <span class="hidden-sm hidden-xs">
-          France
-        </span>
-      </a>
-    </li>
-    <li>
-      <a target="_blank" title="vers le site du Conseil Régional d'Aquitaine-Limousin-Poitou-Charentes" href="http://laregion-alpc.fr/">
-        <i title="" class="glyphicon glyphicon-globe" data-original-title="Aquitaine-Limousin-Poitou-Charentes"></i>
-        <span class="hidden-sm hidden-xs">
-          ALPC
-        </span>
-      </a>
-    </li>
-    <li>
-      <a target="_blank" title="vers le site du Conseil Départemental de Lot et Garonne" href="http://www.lotetgaronne.fr/">
-        <i title="" class="glyphicon glyphicon-globe" data-original-title="Lot-et-Garonne"></i>
-        <span class="hidden-sm hidden-xs">
-          Lot et Garonne
-        </span>
-      </a>
-    </li>
-    <li>
-      <a target="_blank" title="{$page.localisation.cc_title}" href="{$page.localisation.cc_url}">
-        <i title="" class="glyphicon glyphicon-globe" data-original-title="{$page.localisation.cc_text}"></i>
-        <span class="hidden-sm hidden-xs">
-          {$page.localisation.cc_text}
-        </span>
-      </a>
-    </li>
-    <li>
-      <a title="{$page.localisation.commune_title}" href="{$page.localisation.commune_url}">
-        <i title="" class="glyphicon glyphicon-globe" data-original-title="{$page.localisation.commune_text}"></i>
-        <span class="hidden-sm hidden-xs">
-          {$page.localisation.commune_text}
-        </span>
-      </a>
-    </li>
-)
-
-#bandeau
-lib.bandeau = COA
-lib.bandeau {
-  10 = CONTENT
-  10 {
-    table = tt_content
-    select.where = colPos = 0
-    select.orderBy = sorting
-    select.pidInList = {$page.bandeau}
-  }
-}
-
-#search
-lib.search = COA_INT
-lib.search {
-      10 = TEXT
-      10 {
-        typolink.parameter = {$page.search.settings.PID}
-        typolink.additionalParams = &tx_indexedsearch_pi2[action]=search&tx_indexedsearch_pi2[controller]=Search
-        typolink.returnLast = url
-        wrap = <form id="tx_indexedsearch" action="|" method="post">
-      }
-     
-      20 = COA
-      20 {
-        10 = TEXT
-        10.data = GPvar : tx_indexedsearch |sword
-        10.htmlSpecialChars = 1
-        10.wrap = <input name="tx_indexedsearch_pi2[search][sword]" value="|" class="searchField" placeholder="{$page.search.defaultInputValue}" type="text" required/>
-      }
-     
-      30 = TEXT
-      30.value (
-        <input type="hidden" name="tx_indexedsearch_pi2[search][_sections]" value="0" />
-        <input type="hidden" name="tx_indexedsearch_pi2[pointer]" value="0" />
-        <input type="hidden" name="tx_indexedsearch_pi2[ext]" value="0" />
-        <input type="submit" value="{$page.search.defaultSubmitValue}" name="tx_indexedsearch_pi2[search][submitButton]">
-      )
-     
-      40 = TEXT
-      40.value = </form>
-    }
+	#bienvenue
+	lib.bienvenue= TEXT
+	lib.bienvenue.wrap =<p>|</p>
+	lib.bienvenue.value= {$page.bienvenue.msg}
 
 
-### Recherche indexée ###
-config {
-  index_enable = 1
-  index_externals = 1
+	#localisation
+	lib.localisation = TEXT
+	lib.localisation.wrap =<div class="header-links"><ul class="nav navbar-nav">|</ul></div>
+	lib.localisation.value(
+		<li>
+		  <a target="_blank" title="vers le site de l'Union européenne" href="http://europa.eu/index_fr.htm">
+			<i title="" class="glyphicon glyphicon-globe" data-original-title="Europe"></i>
+			<span class="hidden-sm hidden-xs">
+			  Europe
+			</span>
+		  </a>
+		</li>
+		<li>
+		  <a target="_blank" title="vers le site France.fr" href="http://www.france.fr">
+			<i title="" class="glyphicon glyphicon-globe" data-original-title="France"></i>
+			<span class="hidden-sm hidden-xs">
+			  France
+			</span>
+		  </a>
+		</li>
+		<li>
+		  <a target="_blank" title="vers le site du Conseil Régional d'Aquitaine-Limousin-Poitou-Charentes" href="http://laregion-alpc.fr/">
+			<i title="" class="glyphicon glyphicon-globe" data-original-title="Aquitaine-Limousin-Poitou-Charentes"></i>
+			<span class="hidden-sm hidden-xs">
+			  ALPC
+			</span>
+		  </a>
+		</li>
+		<li>
+		  <a target="_blank" title="vers le site du Conseil Départemental de Lot et Garonne" href="http://www.lotetgaronne.fr/">
+			<i title="" class="glyphicon glyphicon-globe" data-original-title="Lot-et-Garonne"></i>
+			<span class="hidden-sm hidden-xs">
+			  Lot et Garonne
+			</span>
+		  </a>
+		</li>
+		<li>
+		  <a target="_blank" title="{$page.localisation.cc_title}" href="{$page.localisation.cc_url}">
+			<i title="" class="glyphicon glyphicon-globe" data-original-title="{$page.localisation.cc_text}"></i>
+			<span class="hidden-sm hidden-xs">
+			  {$page.localisation.cc_text}
+			</span>
+		  </a>
+		</li>
+		<li>
+		  <a title="{$page.localisation.commune_title}" href="{$page.localisation.commune_url}">
+			<i title="" class="glyphicon glyphicon-globe" data-original-title="{$page.localisation.commune_text}"></i>
+			<span class="hidden-sm hidden-xs">
+			  {$page.localisation.commune_text}
+			</span>
+		  </a>
+		</li>
+	)
 
-}
-plugin.tx_indexedsearch {
-   search {
-     # TSFE:id is always the current page
-     targetPid.data = TSFE:id
-   }
-   templateFile = EXT:test/Resources/Private/Templates/Search/Search.html
-   show.rules = 0
-   show.advancedSearchLink = 0
-   show.parsetimes = 0
-   show.L1sections = 1
-   show.L2sections = 1
-   show.LxALLtypes = 0
-   show.resultNumber = 1
-}
-}
+	#bandeau
+	lib.bandeau = COA
+	lib.bandeau {
+	  10 = CONTENT
+	  10 {
+		table = tt_content
+		select.where = colPos = 0
+		select.orderBy = sorting
+		select.pidInList = {$page.bandeau}
+	  }
+	}
+
+	#search
+	lib.search = COA_INT
+	lib.search {
+		  10 = TEXT
+		  10 {
+			typolink.parameter = {$page.search.settings.PID}
+			typolink.additionalParams = &tx_indexedsearch_pi2[action]=search&tx_indexedsearch_pi2[controller]=Search
+			typolink.returnLast = url
+			wrap = <form id="tx_indexedsearch" action="|" method="post">
+		  }
+		 
+		  20 = COA
+		  20 {
+			10 = TEXT
+			10.data = GPvar : tx_indexedsearch |sword
+			10.htmlSpecialChars = 1
+			10.wrap = <input name="tx_indexedsearch_pi2[search][sword]" value="|" class="searchField" placeholder="{$page.search.defaultInputValue}" type="text" required/>
+		  }
+		 
+		  30 = TEXT
+		  30.value (
+			<input type="hidden" name="tx_indexedsearch_pi2[search][_sections]" value="0" />
+			<input type="hidden" name="tx_indexedsearch_pi2[pointer]" value="0" />
+			<input type="hidden" name="tx_indexedsearch_pi2[ext]" value="0" />
+			<input type="submit" value="{$page.search.defaultSubmitValue}" name="tx_indexedsearch_pi2[search][submitButton]">
+		  )
+		 
+		  40 = TEXT
+		  40.value = </form>
+		}
+
+
+	### Recherche indexée ###
+	config {
+	  index_enable = 1
+	  index_externals = 1
+
+	}
+	plugin.tx_indexedsearch {
+	   search {
+		 # TSFE:id is always the current page
+		 targetPid.data = TSFE:id
+	   }
+	   templateFile = EXT:test/Resources/Private/Templates/Search/Search.html
+	   show.rules = 0
+	   show.advancedSearchLink = 0
+	   show.parsetimes = 0
+	   show.L1sections = 1
+	   show.L2sections = 1
+	   show.LxALLtypes = 0
+	   show.resultNumber = 1
+	}
