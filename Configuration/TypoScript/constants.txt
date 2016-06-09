@@ -36,5 +36,9 @@ page{
 		#Permet d'afficher un titre personnalisé au bouton de validation:
 		defaultSubmitValue = OK
         }
+        
+        theme {
+		copyright.text = <a href="http://www.cdg47.fr">CDG47</a>
+	}
 	
 }
