@@ -1,14 +1,13 @@
 <footer>
-<f:if condition="{showFooter}">
 <section class="footer-section">
-    <div id="footer1" class="container">
+    <div class="container">
         <div class="row">
             <div class="col-sm-12">
-              <f:cObject typoscriptObjectPath="lib.footerMenu"/>
+                <f:render partial="Navigation/Footer" arguments="{_all}"/>
             </div>
         </div>
-    </div>  
-    <div id="footer2" class="container">
+    </div>
+	<div class="container">
         <div class="row">
             <div class="col-sm-12">
                 <f:cObject typoscriptObjectPath="lib.dynamicContentSlide" data="{pageUid: '{data.uid}', colPos: '11'}"/>
@@ -16,16 +15,10 @@
         </div>
     </div>
 </section>
-</f:if>
 
-<f:if condition="{showMeta}">
 <section class="meta-section">
     <div class="container">
         <div class="row">
-<!--      <div class="col-md-4 language">
-        <f:cObject typoscriptObjectPath="lib.language"/>
-      </div>
--->
             <f:if condition="{themeCopyright}">
                 <div class="col-md-12 copyright">
                     <f:format.html>{themeCopyrightText}</f:format.html>
@@ -34,5 +27,4 @@
         </div>
     </div>
 </section>
-</f:if>
 </footer>
