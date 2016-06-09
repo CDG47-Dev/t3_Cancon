@@ -1,16 +1,29 @@
 page = PAGE
 page{
 
-	10 = FLUIDTEMPLATE
+    10 = FLUIDTEMPLATE
     10 {
-		templateName = TEXT
+	templateName = TEXT
         templateName.stdWrap.cObject = CASE
         templateName.stdWrap.cObject{			
-            pagets__default_subnav_left_3columns = TEXT
-            pagets__default_subnav_left_3columns.value = DefaultSubNavLeft3Columns
-      
+        	pagets__default_subnav_left_3columns = TEXT
+        	pagets__default_subnav_left_3columns.value = DefaultSubNavLeft3Columns
         }
-	}
+        variables{
+		#copyright
+		themeCopyright= TEXT
+		themeCopyright.value = {$page.theme.copyright.enable}
+		themeCopyrightText = COA
+		themeCopyrightText{
+			10 = TEXT
+			10{
+				data = date:U
+				strftime = %Y
+				wrap = <span>&copy; {$page.theme.copyright.text} &nbsp; |</span>
+			}
+		}		 
+	     }
+}
 	  
 	templateRootPath{
 		0 = EXT:bootstrap_package/Resources/Private/Templates/Page/
