@@ -106,7 +106,7 @@ lib.search = COA_INT
 lib.search {
       10 = TEXT
       10 {
-        typolink.parameter = {$settings.search.PID}
+        typolink.parameter = {$page.search.settings.PID}
         typolink.additionalParams = &tx_indexedsearch_pi2[action]=search&tx_indexedsearch_pi2[controller]=Search
         typolink.returnLast = url
         wrap = <form id="tx_indexedsearch" action="|" method="post">
@@ -117,7 +117,7 @@ lib.search {
         10 = TEXT
         10.data = GPvar : tx_indexedsearch |sword
         10.htmlSpecialChars = 1
-        10.wrap = <input name="tx_indexedsearch_pi2[search][sword]" value="|" class="searchField" placeholder="{$search.defaultInputValue}" type="text" required/>
+        10.wrap = <input name="tx_indexedsearch_pi2[search][sword]" value="|" class="searchField" placeholder="{$page.search.defaultInputValue}" type="text" required/>
       }
      
       30 = TEXT
@@ -125,7 +125,7 @@ lib.search {
         <input type="hidden" name="tx_indexedsearch_pi2[search][_sections]" value="0" />
         <input type="hidden" name="tx_indexedsearch_pi2[pointer]" value="0" />
         <input type="hidden" name="tx_indexedsearch_pi2[ext]" value="0" />
-        <input type="submit" value="{$search.defaultSubmitValue}" name="tx_indexedsearch_pi2[search][submitButton]">
+        <input type="submit" value="{$page.search.defaultSubmitValue}" name="tx_indexedsearch_pi2[search][submitButton]">
       )
      
       40 = TEXT
