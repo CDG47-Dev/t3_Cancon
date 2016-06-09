@@ -22,19 +22,19 @@ page{
         
         search {
 		#Renseigner ici l'Id page de recherche site:
-		settings.search.PID = 1
+		settings.PID = 1
 
 		#Permet d'afficher un titre au dessus du moteur de recherche (laisser vide pour ne rien avoir):
-		search.defaultInputLabel =
+		defaultInputLabel =
 
 		#Permet d'afficher une valeur dans la barre de recherche:
-		search.defaultInputValue = Saisir votre recherche
+		defaultInputValue = Saisir votre recherche
 
 		#Permet d'afficher un titre au survol du bouton de validation:
-		search.defaultSubmitLabel = Rechercher sur tout le site
+		defaultSubmitLabel = Rechercher sur tout le site
 
 		#Permet d'afficher un titre personnalisé au bouton de validation:
-		search.defaultSubmitValue = OK
+		defaultSubmitValue = OK
         }
 	
 }
