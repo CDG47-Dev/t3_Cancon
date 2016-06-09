@@ -41,4 +41,20 @@ page{
 		copyright.text = <a href="http://www.cdg47.fr">CDG47</a>
 	}
 	
+	footer {
+		# Repertoire contenant les pages du pied de page
+		navdir = 
+		# Inclure ou non les pages hors menu (1 ou 0)
+		notinmenu = 1
+		# Page à exclure
+		excludelist = 133,134 
+	}
+	
+	sitemapnav{
+		# Nombre de level à prendre en compte
+		levels = 3
+		# Page à exclure
+		excludelist = 33 
+  }
+	
 }
