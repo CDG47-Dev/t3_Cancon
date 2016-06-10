@@ -1,8 +1,8 @@
 page{
 	fluidtemplate{
-		templateRootPath = EXT:cancon/Resources/Private/Templates/Page/
-		layoutRootPath = EXT:cancon/Resources/Private/Layouts/Page/
-		partialRootPath = EXT:cancon/Resources/Private/Partials/Page/
+		templateRootPath = EXT:t3_cancon/Resources/Private/Templates/Page/
+		layoutRootPath = EXT:t3_cancon/Resources/Private/Layouts/Page/
+		partialRootPath = EXT:t3_cancon/Resources/Private/Partials/Page/
 	
 	}
 	bandeau = 1
