@@ -195,8 +195,8 @@ page{
 	##########################################
 	plugin.bootstrap_package_contentelements {
 		view{
-		   templateRootPath = EXT:serignac/Resources/Private/Templates/ContentElements/
-		   layoutRootPath = EXT:serignac/Resources/Private/Layouts/ContentElements/
-		   partialRootPath  = EXT:serignac/Resources/Private/Partials/ContentElements/
+		   templateRootPath = EXT:test/Resources/Private/Templates/ContentElements/
+		   layoutRootPath = EXT:test/Resources/Private/Layouts/ContentElements/
+		   partialRootPath  = EXT:test/Resources/Private/Partials/ContentElements/
 		}
 	}
