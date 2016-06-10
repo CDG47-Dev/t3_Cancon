@@ -10,8 +10,8 @@
  * writing. "version" and "dependencies" must not be touched!
  ***************************************************************/
 $EM_CONF[$_EXTKEY] = array(
-    'title' => 'test',
-    'description' => 'ext test',
+    'title' => 'cancon',
+    'description' => 'cancon gabarit',
     'category' => 'fe',
     'constraints' => array(
         'depends' => array(
