@@ -6,9 +6,9 @@ plugin.bootstrap_package {
               font-size-base = 14px
               navbar-height = 30px
               bandeauHeight = 300px
-              footer-gradient1 = rgb(30, 50, 230)
-              footer-gradient2 = rgb(90, 140, 250)
-              footer-bottom = rgb(90, 140, 250)
+              footer-gradient1 = rgb(133, 96, 168)
+              footer-gradient2 = rgb(152, 133, 169)
+              footer-bottom = rgb(152, 133, 169)
              }
     }
 }
