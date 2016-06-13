@@ -93,9 +93,9 @@ page{
 		</li>
 		<li>
 		  <a target="_blank" title="vers le site du Conseil Régional d'Aquitaine-Limousin-Poitou-Charentes" href="http://laregion-alpc.fr/">
-			<i title="" class="glyphicon glyphicon-globe" data-original-title="Aquitaine-Limousin-Poitou-Charentes"></i>
+			<i title="" class="glyphicon glyphicon-globe" data-original-title="Nouvelle Aquitaine"></i>
 			<span class="hidden-sm hidden-xs">
-			  ALPC
+			  Nouvelle Aquitaine
 			</span>
 		  </a>
 		</li>
