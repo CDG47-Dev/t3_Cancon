@@ -17,7 +17,7 @@ page{
         }  
 	
 	bienvenue {
-		msg = bienvenue sur le site officiel de la commune
+		msg = Bienvenue sur le site officiel de la commune de Cancon
         }
         
         search {
