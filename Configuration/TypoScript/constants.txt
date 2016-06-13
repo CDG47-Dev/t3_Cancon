@@ -59,13 +59,13 @@ page{
   
   	logo {
 	    # Logo par défaut
-	    file = EXT:t3_serignac/Resources/Public/Images/logo.png
+	    file = EXT:t3_cancon/Resources/Public/Images/logo.png
 	    # Hauteur du logo
 	    height = 90
 	    # Largeur du logo
 	    width = 220
 	    # label=Alternative text: Text of the alt attribute of the logo image (default: "<website title> logo"
-	    alt = Sérignac
+	    alt = Cancon
 	}  	
 }
 
