@@ -24,7 +24,8 @@ page{
 					}
 				}		 
 		}
-		
+			
+				
 		##########################
 		### DATA PREPROCESSING ###
 		##########################
@@ -63,6 +64,12 @@ page{
 		1 = EXT:t3_cancon/Resources/Private/Partials/Page/
 		2 = {$page.fluidtemplate.partialRootPath}
 	}
+	
+	includeCSS {
+		gabarit = EXT:t3_cancon/Resources/Public/Less/gabarit.less
+		gabarit.title = CSS
+		
+	}	
 }	
 
 	#bienvenue
@@ -93,9 +100,9 @@ page{
 		</li>
 		<li>
 		  <a target="_blank" title="vers le site du Conseil Régional d'Aquitaine-Limousin-Poitou-Charentes" href="http://laregion-alpc.fr/">
-			<i title="" class="glyphicon glyphicon-globe" data-original-title="Aquitaine-Limousin-Poitou-Charentes"></i>
+			<i title="" class="glyphicon glyphicon-globe" data-original-title="Nouvelle Aquitaine"></i>
 			<span class="hidden-sm hidden-xs">
-			  ALPC
+			  Nouvelle Aquitaine
 			</span>
 		  </a>
 		</li>
