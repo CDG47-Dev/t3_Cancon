@@ -189,14 +189,3 @@ page{
 	   show.LxALLtypes = 0
 	   show.resultNumber = 1
 	}
-
-	##########################################
-	### BOOTSTRAP PACKAGE CONTENT ELEMENTS ###
-	##########################################
-	plugin.bootstrap_package_contentelements {
-		view{
-		   templateRootPath = EXT:t3_cancon/Resources/Private/Templates/ContentElements/
-		   layoutRootPath = EXT:t3_cancon/Resources/Private/Layouts/ContentElements/
-		   partialRootPath  = EXT:t3_cancon/Resources/Private/Partials/ContentElements/
-		}
-	}
