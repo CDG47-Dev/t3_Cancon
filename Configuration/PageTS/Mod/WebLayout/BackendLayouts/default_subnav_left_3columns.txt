@@ -15,14 +15,14 @@ mod {
                                 columns {
                                     1 {
                                         name = Subnav
-                                        colspan = 1
+                                        colspan = 2
                                     }
                                      
                                     2 {
                                         name = Actualités
                                         colPos = 0
                                         rowspan= 2
-                                        colspan = 3
+                                        colspan = 2
                                     }
                                     3 {
                                         name = Colonne de Droite 
@@ -39,7 +39,7 @@ mod {
                                     1 {
                                         name = Contenu Gauche
                                         colPos = 1
-                                        colspan = 1
+                                        colspan = 2
                                       }
                                    }
                               }
@@ -49,7 +49,7 @@ mod {
                                     2 {
                                         name = Pied de Page
                                         colPos  = 11
-                                        colspan = 2
+                                        colspan = 6
                                     }
                                 }
 
