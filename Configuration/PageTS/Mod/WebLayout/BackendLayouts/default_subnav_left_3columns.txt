@@ -25,7 +25,7 @@ mod {
                                         colspan = 3
                                     }
                                     3 {
-                                        name = Column 
+                                        name = Colonne de Droite 
                                         colPos = 2
                                         rowspan= 2 
                                         colspan = 2
@@ -37,7 +37,7 @@ mod {
                             2 {
                                 columns {
                                     1 {
-                                        name = ContenuLeft
+                                        name = Contenu Gauche
                                         colPos = 1
                                         colspan = 1
                                       }
@@ -46,19 +46,9 @@ mod {
 
                            3 {
                                 columns {
-                                    1 {
-                                        name = footer1
-                                        colPos = 10
-                                        colspan = 2
-                                    }
                                     2 {
-                                        name =footer2
+                                        name = Pied de Page
                                         colPos  = 11
-                                        colspan = 2
-                                    }
-                                    3 {
-                                        name = footer3
-                                        colPos = 12
                                         colspan = 2
                                     }
                                 }

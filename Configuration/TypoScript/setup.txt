@@ -4,25 +4,25 @@ page{
 	10 = FLUIDTEMPLATE
     10 {
 		templateName = TEXT
-        templateName.stdWrap.cObject = CASE
-        templateName.stdWrap.cObject{			
-            pagets__default_subnav_left_3columns = TEXT
-            pagets__default_subnav_left_3columns.value = DefaultSubNavLeft3Columns
+        	templateName.stdWrap.cObject = CASE
+        	templateName.stdWrap.cObject{			
+            		pagets__default_subnav_left_3columns = TEXT
+            		pagets__default_subnav_left_3columns.value = DefaultSubNavLeft3Columns
       
-        }
+        	}
 		variables {
-				#copyright
-				themeCopyright= TEXT
-				themeCopyright.value = {$page.theme.copyright.enable}
-				themeCopyrightText = COA
-				themeCopyrightText{
-					10 = TEXT
-					10{
-						data = date:U
-						strftime = %Y
-						wrap = <span>&copy; {$page.theme.copyright.text} &nbsp; |</span>
-					}
-				}		 
+			#copyright
+			themeCopyright= TEXT
+			themeCopyright.value = {$page.theme.copyright.enable}
+			themeCopyrightText = COA
+			themeCopyrightText{
+				10 = TEXT
+				10{
+					data = date:U
+					strftime = %Y
+					wrap = <span>&copy; {$page.theme.copyright.text} &nbsp; |</span>
+				}
+			}		 
 		}
 			
 				
@@ -33,9 +33,9 @@ page{
 			50 = BK2K\BootstrapPackage\DataProcessing\MenuProcessor
 			50 {
 				special = directory
-                special.value = {$page.footer.navdir}
+				special.value = {$page.footer.navdir}
 				includeNotInMenu = {$page.footer.notinmenu}
-                excludeUidList = {$page.footer.excludelist}
+				excludeUidList = {$page.footer.excludelist}
 				as = footernavigation
 			}
 			
@@ -53,13 +53,13 @@ page{
 		1 = EXT:t3_cancon/Resources/Private/Templates/Page/
 		2 = {$page.fluidtemplate.templateRootPath}
 	}
-    layoutRootPath{
+     	layoutRootPath{
 		0 = EXT:bootstrap_package/Resources/Private/Layouts/Page/
 		1 = EXT:t3_cancon/Resources/Private/Layouts/Page/
 		2 = {$page.fluidtemplate.layoutRootPath}		
 	}
 	
-    partialRootPath{
+    	partialRootPath{
 		0 = EXT:bootstrap_package/Resources/Private/Partials/Page/
 		1 = EXT:t3_cancon/Resources/Private/Partials/Page/
 		2 = {$page.fluidtemplate.partialRootPath}
