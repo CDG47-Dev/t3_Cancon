@@ -8,12 +8,18 @@ page{
 	bandeau = 1
 
 	localisation {
-             	cc_url = http://www.ccbastides47.com/
-				cc_title = vers le site de Bastides en Haut-Agenais Périgord
-				cc_text = Bastides en Haut-Agenais Périgord 
-        commune_url = http://www.cancon.fr/
-        commune_title = vers l'accueil site de Cancon
-        commune_text =  Cancon
+        	region_url = http://laregion-alpc.fr/
+		region_title = vers le site du Conseil Régional d'Aquitaine-Limousin-Poitou-Charentes
+		region_text = Nouvelle-Aquitaine
+		departement_url = http://www.lotetgaronne.fr/
+		departement_title = vers le site du Conseil Départemental de Lot et Garonne
+		departement_text = Lot-et-Garonne
+	     	cc_url = http://www.ccbastides47.com/
+		cc_title = vers le site de Bastides en Haut-Agenais Périgord
+		cc_text = Bastides en Haut-Agenais Périgord 
+	        commune_url = http://www.cancon.fr/
+	        commune_title = vers l'accueil site de Cancon
+	        commune_text =  Cancon
         }  
 	
 	bienvenue {

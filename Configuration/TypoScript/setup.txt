@@ -84,7 +84,6 @@ page{
 	lib.localisation.value(
 		<li>
 		  <a target="_blank" title="vers le site de l'Union européenne" href="http://europa.eu/index_fr.htm">
-			<i title="" class="glyphicon glyphicon-menu-right" data-original-title="Europe"></i>
 			<span class="hidden-sm hidden-xs">
 			  Europe
 			</span>
@@ -99,18 +98,18 @@ page{
 		  </a>
 		</li>
 		<li>
-		  <a target="_blank" title="vers le site du Conseil Régional d'Aquitaine-Limousin-Poitou-Charentes" href="http://laregion-alpc.fr/">
-			<i title="" class="glyphicon glyphicon-menu-right" data-original-title="Nouvelle Aquitaine"></i>
+		  <a target="_blank" title="{$page.localisation.region_title}" href="{$page.localisation.region_url}">
+			<i title="" class="glyphicon glyphicon-menu-right" data-original-title="{$page.localisation.region_text}"></i>
 			<span class="hidden-sm hidden-xs">
-			  Nouvelle Aquitaine
+			  {$page.localisation.region_text}
 			</span>
 		  </a>
 		</li>
 		<li>
-		  <a target="_blank" title="vers le site du Conseil Départemental de Lot et Garonne" href="http://www.lotetgaronne.fr/">
-			<i title="" class="glyphicon glyphicon-menu-right" data-original-title="Lot-et-Garonne"></i>
+		  <a target="_blank" title="{$page.localisation.departement_title}" href="{$page.localisation.departement_url}">
+			<i title="" class="glyphicon glyphicon-menu-right" data-original-title="{$page.localisation.departement_text}"></i>
 			<span class="hidden-sm hidden-xs">
-			  Lot et Garonne
+			  {$page.localisation.departement_text}
 			</span>
 		  </a>
 		</li>
