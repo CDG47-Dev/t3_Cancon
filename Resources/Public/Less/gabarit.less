@@ -26,6 +26,22 @@
     margin-top :0;
     margin-bottom:0;
  }
+ 
+.bloc-header {
+    border: 1px solid grey;
+    & > .bloc-header3{
+      background-color: black;
+      color: white;
+    }
+    & > .bloc-header3::after {
+    background-color: red;
+    content: "";
+    display: inline-block;
+    float: right;
+    height: 27px;
+    width: 2%;
+  }
+}
 
 
 /*

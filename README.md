@@ -29,5 +29,9 @@ Ne pas oublier dans le fichier Resources/Private/Layouts/Page/Default.html de fa
 * Bienvenue : - Message de bienvenue personnalisable.
 Ne pas oublier dans le fichier Resources/Private/Layouts/Page/Default.html de faire appel à cette lib.
 
+* Menu du pied de page :
+    * Inclure/Exclure les pages hors-menu : page.footer.notinmenu
+    * Uid des dossiers contenant les pages à insérer : page.footer.navdir (ex: page.footer.navdir = 420,458)
+    * Uid des pages à exclure du menu: page.footer.excludelist (ex: page.footer.excludelist = 1,2)
 
 
