@@ -43,6 +43,21 @@
   }
 }
 
+.bloc-encadre{
+	border: 0.2em solid @bordercadre;
+	& > h1,
+	& >	h2,
+	& >	h3,
+	& >	h4,
+	& >	h5,
+	& >	h6 {
+			border-bottom: 0.2em solid @bordercadre;
+			text-align: center;
+			font-style: italic;
+			font-weight: bold;
+		}
+}
+
 /*
  * Background Style
  * --------------------------------------------------

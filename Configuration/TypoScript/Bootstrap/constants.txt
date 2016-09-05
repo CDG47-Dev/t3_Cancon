@@ -46,6 +46,7 @@ plugin.bootstrap_package {
 			  mainmenu7-dropdown-bg = rgb(133, 96, 168)
 			  mainmenu8-dropdown-bg = rgb(133, 96, 168)	
 			  mainmenu-bar-bg = #333333
+			  bordercadre = rgba(133, 96, 168, 1)
              }
     }
 }
