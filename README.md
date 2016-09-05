@@ -37,6 +37,7 @@ Ne pas oublier dans le fichier Resources/Private/Layouts/Page/Default.html de fa
     * Uid des pages à exclure du menu: page.footer.excludelist (ex: page.footer.excludelist = 1,2)
 
 * Rubrique du menu principal personnalisable:
+	* une variable permet de choisir si on souhaite des rubriques de couleurs ou non : menucouleur ( si oui, la feuille less personnalisation est incluse)
 	* couleur du texte
 	* couleur de fond
 	* couleur de fond du sous-menu
