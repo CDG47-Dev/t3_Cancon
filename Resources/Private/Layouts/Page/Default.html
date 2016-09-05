@@ -1,5 +1,6 @@
 <div class="bg-effet"></div>
-<div class="body-bg{f:if(condition:settings.navigation.type, then:' body-bg-{settings.navigation.type}')}">
+<div class="body-bg{f:if(condition:settings.navigation.type, then:' body-bg-{settings.navigation.type}')} 
+<f:if condition="{mainnavigation}"><f:for each="{mainnavigation}" as="mainnavigationItem" iteration="iterator">{f:if(condition: mainnavigationItem.active, then:'rubrique{iterator.index}')}</f:for></f:if>">
     <f:link.page class="sr-only sr-only-focusable" section="content">
         {f:translate(key: 'skiptomaincontent', extensionName: 'bootstrap_package')}
     </f:link.page>
