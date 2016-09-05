@@ -25,11 +25,13 @@ page{
 	    commune_text =  Cancon
     }  
 		
-	# Affichage de la zone Bienvenue et Localisation
 	theme{
+		# Affichage de la zone Bienvenue et Localisation
 		headertopsection{
 			enable = 1
 		}
+		# Couleur pour chaque rubriques principals
+		menucouleur = 0
 	}
 	
 	#Message de la zone Bienvenue
