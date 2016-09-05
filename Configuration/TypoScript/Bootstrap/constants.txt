@@ -15,6 +15,7 @@ plugin.bootstrap_package {
 			  box-shadow = rgba(50, 50, 50, 0.75)
 			  border-color = black
 			  background-container = white
+			  border-radius-mainmenu = 0
 			  mainmenu-link = white
 			  mainmenu-sub-link = white
 			  mainmenu-sub-link-hover = #333333
