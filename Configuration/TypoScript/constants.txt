@@ -5,28 +5,40 @@ page{
 		partialRootPath = EXT:t3_cancon/Resources/Private/Partials/Page/
 	
 	}
+	
+	# Uid de la page contenant le bandeau
 	bandeau = 1
 
+	#Paramètre des liens de la zone Localisation
 	localisation {
-        	region_url = http://laregion-alpc.fr/
+        region_url = http://laregion-alpc.fr/
 		region_title = vers le site du Conseil Régional d'Aquitaine-Limousin-Poitou-Charentes
 		region_text = Nouvelle-Aquitaine
 		departement_url = http://www.lotetgaronne.fr/
 		departement_title = vers le site du Conseil Départemental de Lot et Garonne
 		departement_text = Lot-et-Garonne
-	     	cc_url = http://www.ccbastides47.com/
+	    cc_url = http://www.ccbastides47.com/
 		cc_title = vers le site de Bastides en Haut-Agenais Périgord
 		cc_text = Bastides en Haut-Agenais Périgord 
-	        commune_url = http://www.cancon.fr/
-	        commune_title = vers l'accueil site de Cancon
-	        commune_text =  Cancon
-        }  
+	    commune_url = http://www.cancon.fr/
+	    commune_title = vers l'accueil site de Cancon
+	    commune_text =  Cancon
+    }  
+		
+	# Affichage de la zone Bienvenue et Localisation
+	theme{
+		headertopsection{
+			enable = 1
+		}
+	}
 	
+	#Message de la zone Bienvenue
 	bienvenue {
 		msg = Bienvenue sur le site officiel de la commune de Cancon
-        }
-        
-        search {
+    }
+      
+	#Paramètre du champ recherche	
+	search {
 		#Renseigner ici l'Id page de recherche site:
 		settings.PID = 1
 
@@ -41,12 +53,14 @@ page{
 
 		#Permet d'afficher un titre personnalisé au bouton de validation:
 		defaultSubmitValue = OK
-        }
-        
-        theme {
-		copyright.text = <a href="http://www.cdg47.fr">CDG47</a>
 	}
 	
+	# Copyright du site
+	theme {
+	copyright.text = <a href="http://www.cdg47.fr">CDG47</a>
+	}
+	
+	#Paramètre des liens en pied de page
 	footer {
 		# Repertoire contenant les pages du pied de page
 		navdir = 
@@ -56,6 +70,7 @@ page{
 		excludelist = 133,134 
 	}
 	
+	# Paramètre pour le plan de site
 	sitemapnav{
 		# Nombre de level à prendre en compte
 		levels = 3
@@ -63,6 +78,7 @@ page{
 		excludelist = 33 
   }
   
+   # Paramètre pour le logo
   	logo {
 	    # Logo par défaut
 	    file = EXT:t3_cancon/Resources/Public/Images/logo.png
@@ -75,11 +91,6 @@ page{
 	}  	
 }
 
-<<<<<<< HEAD
-##################################
-=======
-#################################
->>>>>>> origin/master
 #### BOOTSTRAP LESS CONSTANTS ####
 ##################################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3_cancon/Configuration/TypoScript/Bootstrap/constants.txt">

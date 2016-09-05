@@ -70,6 +70,19 @@ page{
 		gabarit.title = CSS
 		
 	}	
+	
+	################
+    ### SETTINGS ###
+	################
+	
+    #################
+    ### VARIABLES ###
+    #################	
+     variables {
+         showHeaderTop = TEXT
+         showHeaderTop.value = {$page.theme.headertopsection.enable}	
+     }
+	
 }	
 
 	#bienvenue

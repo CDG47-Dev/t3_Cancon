@@ -9,6 +9,43 @@ plugin.bootstrap_package {
               footer-gradient1 = rgb(133, 96, 168)
               footer-gradient2 = rgb(152, 133, 169)
               footer-bottom = rgb(152, 133, 169)
+			  bodyBackground = rgb(242, 242, 242)
+			  border-radius-bottom = 0 0 10px 10px
+			  border-radius-top = 10px 10px 0 0
+			  box-shadow = rgba(50, 50, 50, 0.75)
+			  border-color = black
+			  background-container = white
+			  mainmenu-link = white
+			  mainmenu-sub-link = white
+			  mainmenu-sub-link-hover = #333333
+			  mainmenu-sub-link-hover-bg = #e8e8e8
+			  mainmenu-sub-link-hover-gd1 = #f5f5f5
+			  mainmenu-sub-link-hover-gd2 = #e8e8e8
+			  mainmenu1-bg = rgba(133, 96, 168, 1)
+			  mainmenu2-bg = rgba(66, 139, 202, 1)
+			  mainmenu3-bg = rgba(223, 45, 45, 1)
+			  mainmenu4-bg = rgba(98, 170, 68, 1)
+			  mainmenu5-bg = rgba(201, 95, 65, 1)
+			  mainmenu6-bg = rgba(239, 201, 76, 1)
+			  mainmenu7-bg = rgba(133, 96, 168, 1)
+			  mainmenu8-bg = rgba(133, 96, 168, 1)
+			  mainmenu1-border = rgba(133, 96, 168, 1)
+			  mainmenu2-border = rgba(66, 139, 202, 1)
+			  mainmenu3-border = rgba(223, 45, 45, 1)
+			  mainmenu4-border = rgba(98, 170, 68, 1)
+			  mainmenu5-border = rgba(201, 95, 65, 1)
+			  mainmenu6-border = rgb(133, 96, 168)
+			  mainmenu7-border = rgb(133, 96, 168)
+			  mainmenu8-border = rgb(133, 96, 168)	
+			  mainmenu1-dropdown-bg = rgb(133, 96, 168)
+			  mainmenu2-dropdown-bg = rgba(66, 139, 202, 1)
+			  mainmenu3-dropdown-bg = rgba(223, 45, 45, 1)
+			  mainmenu4-dropdown-bg = rgba(98, 170, 68, 1)
+			  mainmenu5-dropdown-bg = rgba(201, 95, 65, 1)
+			  mainmenu6-dropdown-bg = rgb(133, 96, 168)
+			  mainmenu7-dropdown-bg = rgb(133, 96, 168)
+			  mainmenu8-dropdown-bg = rgb(133, 96, 168)	
+			  mainmenu-bar-bg = #333333
              }
     }
 }

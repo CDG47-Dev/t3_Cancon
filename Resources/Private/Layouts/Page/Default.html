@@ -1,10 +1,11 @@
-<div id="bg-effet"></div>
+<div class="bg-effet"></div>
 <div class="body-bg{f:if(condition:settings.navigation.type, then:' body-bg-{settings.navigation.type}')}">
     <f:link.page class="sr-only sr-only-focusable" section="content">
         {f:translate(key: 'skiptomaincontent', extensionName: 'bootstrap_package')}
     </f:link.page>
 <header class="wrapper">
-	 <div class="container header-top">
+    <f:if condition="{showHeaderTop}">
+	 <section class="container header-top">
 		<div class="row">
 		  <div class="col-md-4 bienvenue">
 			<f:cObject typoscriptObjectPath="lib.bienvenue"/> 
@@ -13,7 +14,8 @@
 			<f:cObject typoscriptObjectPath="lib.localisation"/>
 		  </div>
 		</div>
-	</div>
+	</section>
+	</f:if>
 	<div class="container bandeau">
 		<f:cObject typoscriptObjectPath="lib.bandeau"/>
 	</div> 
@@ -24,7 +26,6 @@
 <section class="wrapper">
 	<div class="container principal">
 		<div class="content">
-
 			<div id="content" class="main-section">
 				<!--TYPO3SEARCH_begin-->
 				<section id="p{data.uid}" class="{pageClass}">

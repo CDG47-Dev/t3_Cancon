@@ -43,7 +43,42 @@
   }
 }
 
+/*
+ * Background Style
+ * --------------------------------------------------
+ */
+.bg-effet {
+    background: @bodyBackground;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+ 
+/*
+ * Header Top
+ * --------------------------------------------------
+ */
+ 
+header.wrapper > .container:first-child {
+    border-radius: @border-radius-top;
+    border-top: 1px solid @border-color;
+    margin-top: 10px;
+    padding-top: 5px;
+	box-shadow: 0 0 10px -6px @box-shadow;
+}
 
+header.wrapper > .bandeau:first-child{
+   padding-top: 0px;
+   & .carousel-inner{
+		& > .item{
+		  border-radius: @border-radius-top;
+		}
+   }
+}
+ 
 /*
  * Bandeau Style
  * --------------------------------------------------
@@ -76,6 +111,7 @@
  * --------------------------------------------------
  */
 footer{
+ margin-bottom:10px;
  section{
   &.footer-section{
     background: @footer-gradient1;
@@ -92,6 +128,7 @@ footer{
   }
   &.meta-section{
     background: @footer-bottom;
+	border-radius: @border-radius-bottom;
   }
  }
 
@@ -118,15 +155,135 @@ footer{
  * --------------------------------------------------
  */
 .wrapper > .container{
-   border-left : 1px solid black;
-   border-right: 1px solid black;
+   border-left : 1px solid @border-color;
+   border-right: 1px solid @border-color;
+   box-shadow: 4px 0 6px -6px @box-shadow , -4px 0 6px -6px @box-shadow;
+   background: @background-container;
 }
 
 footer.wrapper > .container {
-    border-bottom: 1px solid black;
+	border-radius: @border-radius-bottom;
+    border-bottom: 1px solid @border-color;
+	box-shadow: 0px 6px 6px -6px @box-shadow;
     padding: 0;
 }
 
 header + div.wrapper > .container{
     padding: 0;
+}
+
+/*
+ * Mainmenu
+ * --------------------------------------------------
+ */
+.mainmenu1 {
+    background: @mainmenu1-bg;
+}
+.mainmenu2 {
+    background: @mainmenu2-bg;
+}
+.mainmenu3 {
+    background: @mainmenu3-bg;
+}
+.mainmenu4 {
+    background: @mainmenu4-bg;
+}
+.mainmenu5 {
+    background: @mainmenu5-bg;
+}
+.mainmenu6 {
+    background: @mainmenu6-bg;
+}
+.mainmenu7 {
+    background: @mainmenu7-bg;
+}
+.mainmenu8 {
+    background: @mainmenu8-bg;
+}
+.mainmenu1 ul.dropdown-menu {
+    border: 1px solid @mainmenu1-border;
+	background-color: @mainmenu1-dropdown-bg;
+}
+.mainmenu2 ul.dropdown-menu {
+    border: 1px solid @mainmenu2-border;
+	background-color: @mainmenu2-dropdown-bg;
+}
+.mainmenu3 ul.dropdown-menu {
+    border: 1px solid @mainmenu3-border;
+	background-color: @mainmenu3-dropdown-bg;
+}
+.mainmenu4 ul.dropdown-menu {
+    border: 1px solid @mainmenu4-border;
+	background-color: @mainmenu4-dropdown-bg;
+}
+.mainmenu5 ul.dropdown-menu {
+    border: 1px solid @mainmenu5-border;
+	background-color: @mainmenu5-dropdown-bg;
+}
+.mainmenu6 ul.dropdown-menu {
+    border: 1px solid @mainmenu6-border;
+	background-color: @mainmenu6-dropdown-bg;
+}
+.mainmenu7 ul.dropdown-menu {
+    border: 1px solid @mainmenu7-border;
+	background-color: @mainmenu7-dropdown-bg;
+}
+.mainmenu8 ul.dropdown-menu {
+    border: 1px solid @mainmenu8-border;
+	background-color: @mainmenu8-dropdown-bg;
+}
+.navbar-main{
+	& > li[class*="mainmenu"]{
+		& > a{
+		  color : @mainmenu-link;
+		  & .bar{
+			background-color: @mainmenu-bar-bg;
+		  }
+		}
+		.dropdown-menu{
+			& > li{
+				& > a{
+					color : @mainmenu-sub-link;
+					&:hover{
+						color: @mainmenu-sub-link-hover;
+						background-color: @mainmenu-sub-link-hover-bg;
+						background-image: linear-gradient(to bottom, @mainmenu-sub-link-hover-gd1 0px, @mainmenu-sub-link-hover-gd2 100%);
+						background-repeat: repeat-x;						
+					}
+					&:focus{
+						color: @mainmenu-sub-link-hover;
+						background-color: @mainmenu-sub-link-hover-bg;
+						background-image: linear-gradient(to bottom, @mainmenu-sub-link-hover-gd1 0px, @mainmenu-sub-link-hover-gd2 100%);
+						background-repeat: repeat-x;						
+					}					
+				}
+			}
+			& > .active{
+				& > a{
+					color: @mainmenu-sub-link-hover;
+					background-color: @mainmenu-sub-link-hover-bg;
+					background-image: linear-gradient(to bottom, @mainmenu-sub-link-hover-gd1 0px, @mainmenu-sub-link-hover-gd2 100%);
+					background-repeat: repeat-x;					
+					&:hover{
+						color: @mainmenu-sub-link-hover;
+						background-color: @mainmenu-sub-link-hover-bg;
+						background-image: linear-gradient(to bottom, @mainmenu-sub-link-hover-gd1 0px, @mainmenu-sub-link-hover-gd2 100%);
+						background-repeat: repeat-x;						
+					}
+					&:focus{
+						color: @mainmenu-sub-link-hover;
+						background-color: @mainmenu-sub-link-hover-bg;
+						background-image: linear-gradient(to bottom, @mainmenu-sub-link-hover-gd1 0px, @mainmenu-sub-link-hover-gd2 100%);
+						background-repeat: repeat-x;						
+					}
+				}
+			}
+		}
+		&:hover{
+			& > ul.dropdown-menu{
+				display: block;
+				transition: 0s linear .05s;
+			}
+		}
+	}
 }
