@@ -96,7 +96,11 @@ plugin.bootstrap_package {
 			  rubrique8-link-hover = #333333
 			  rubrique8-bordercadre = rgb(133, 96, 168)
 			  rubrique8-bloc-header-color = rgb(133, 96, 168)
-			  rubrique8-headings = rgb(133, 96, 168)				  
+			  rubrique8-headings = rgb(133, 96, 168)
+			  logoZoneWidth = 100%
+			  logoPosX = 0
+			  logoPosTop = 90px
+			  logoPosBottom = none
              }
     }
 }

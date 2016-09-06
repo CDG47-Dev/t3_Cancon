@@ -90,6 +90,8 @@ page{
 	    width = 220
 	    # label=Alternative text: Text of the alt attribute of the logo image (default: "<website title> logo"
 	    alt = Cancon
+		# Définition de la position du logo Gauche/Superposé
+		positionGauche = 1
 	}  	
 }
 

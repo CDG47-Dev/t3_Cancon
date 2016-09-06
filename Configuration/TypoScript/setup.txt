@@ -46,6 +46,15 @@ page{
 				as = sitemapnavigation
 			}      
 		}
+		#################
+		### VARIABLES ###
+		#################	
+		 variables {
+			 showHeaderTop = TEXT
+			 showHeaderTop.value = {$page.theme.headertopsection.enable}	
+			 logoLeft = TEXT
+			 logoLeft.value = {$page.logo.positionGauche}	 
+		 }		
 	}
 	  
 	templateRootPath{
@@ -73,18 +82,6 @@ page{
 		personnalisation.if.isTrue = {$page.theme.menucouleur}
 		
 	}	
-	
-	################
-    ### SETTINGS ###
-	################
-	
-    #################
-    ### VARIABLES ###
-    #################	
-     variables {
-         showHeaderTop = TEXT
-         showHeaderTop.value = {$page.theme.headertopsection.enable}	
-     }
 	
 }	
 

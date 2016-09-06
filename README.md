@@ -22,7 +22,10 @@ On les retrouvent au chemin suivant : t3_Serignac/Configuration/TypoScript/const
 
 * Le bandeau : - Création d'une page Bandeau de type Carousel qui va contenir un ou plusieurs Carousel Item.
                - Après création cette page possède un ID qu'il faut retranscrire dans le fichier énoncé plus haut.
+			   - Afin d'éviter les marges au dessus et en dessous, on peut utiliser le style de frame "no-frame".
 Ne pas oublier dans le fichier Resources/Private/Layouts/Page/Default.html de faire appel à cette lib.
+
+* Le logo : possibilité de définir sa position dans la zone bandeau (gauche ou superposé)
 
 * Possibilité d'afficher ou non la localisation et le message de bienvenue
 

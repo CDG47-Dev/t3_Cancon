@@ -101,10 +101,27 @@ header.wrapper > .bandeau:first-child{
 
 .bandeau{
     padding: 0;
+	position: relative;
+	min-height: @bandeauHeight;
    .carousel-inner > .item{
        height: @bandeauHeight;
     }
-
+  .logo-fix {
+		display: inline-block;
+		height: @bandeauHeight;
+		line-height: @bandeauHeight;
+		width: 100%;
+		text-align: center;
+	} 
+	.logo-sup {
+		left: @logoPosX;
+		position: absolute;
+		text-align: center;
+		top: @logoPosTop;
+		bottom: @logoPosBottom;
+		width: @logoZoneWidth;
+		z-index: 1000;
+	}	
 }
 
 /*
