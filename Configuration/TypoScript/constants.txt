@@ -41,6 +41,9 @@ page{
       
 	#Paramètre du champ recherche	
 	search {
+		# Définition de la position du champ recherche dans le menu ou colonne de droite
+		positionDroite = 0
+		
 		#Renseigner ici l'Id page de recherche site:
 		settings.PID = 1
 
@@ -54,7 +57,7 @@ page{
 		defaultSubmitLabel = Rechercher sur tout le site
 
 		#Permet d'afficher un titre personnalisé au bouton de validation:
-		defaultSubmitValue = OK
+		defaultSubmitValue = <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
 	}
 	
 	# Copyright du site

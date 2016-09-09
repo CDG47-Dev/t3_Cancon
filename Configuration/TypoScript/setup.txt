@@ -1,3 +1,17 @@
+config {
+    // Language Settings
+    sys_language_uid = 0
+    sys_language_overlay = 1
+    sys_language_mode = content_fallback
+    language = fr
+    locale_all = fr_FR.UTF-8
+    htmlTag_setParams = lang="fr" dir="ltr" class="no-js"
+
+	//Search Settings
+	index_enable = 1
+    index_externals = 1
+
+}
 page = PAGE
 page{
 
@@ -52,8 +66,11 @@ page{
 		 variables {
 			 showHeaderTop = TEXT
 			 showHeaderTop.value = {$page.theme.headertopsection.enable}	
-			 logoLeft = TEXT
-			 logoLeft.value = {$page.logo.positionGauche}	 
+			 showLogoLeft = TEXT
+			 showLogoLeft.value = {$page.logo.positionGauche}
+			 showSearchRight = TEXT
+			 showSearchRight.value = {$page.search.positionDroite}
+			 
 		 }		
 	}
 	  
@@ -156,6 +173,11 @@ page{
 	  }
 	}
 
+	#### INDEXED SEARCH
+	[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('indexed_search')]
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3_cancon/Configuration/TypoScript/Extension/IndexedSearch.txt">
+	[global]
+
 	#search
 	lib.search = COA_INT
 	lib.search {
@@ -164,7 +186,7 @@ page{
 			typolink.parameter = {$page.search.settings.PID}
 			typolink.additionalParams = &tx_indexedsearch_pi2[action]=search&tx_indexedsearch_pi2[controller]=Search
 			typolink.returnLast = url
-			wrap = <form id="tx_indexedsearch" action="|" method="post">
+			wrap = <form id="tx_indexedsearch" action="|" method="post" role="search">
 		  }
 		 
 		  20 = COA
@@ -172,7 +194,7 @@ page{
 			10 = TEXT
 			10.data = GPvar : tx_indexedsearch |sword
 			10.htmlSpecialChars = 1
-			10.wrap = <input name="tx_indexedsearch_pi2[search][sword]" value="|" class="searchField" placeholder="{$page.search.defaultInputValue}" type="text" required/>
+			10.wrap = <label for="search">{$page.search.defaultInputLabel}</label><input name="tx_indexedsearch_pi2[search][sword]" value="|" class="searchField" placeholder="{$page.search.defaultInputValue}" type="text" required="required" id="search"/>
 		  }
 		 
 		  30 = TEXT
@@ -180,31 +202,9 @@ page{
 			<input type="hidden" name="tx_indexedsearch_pi2[search][_sections]" value="0" />
 			<input type="hidden" name="tx_indexedsearch_pi2[pointer]" value="0" />
 			<input type="hidden" name="tx_indexedsearch_pi2[ext]" value="0" />
-			<input type="submit" value="{$page.search.defaultSubmitValue}" name="tx_indexedsearch_pi2[search][submitButton]">
+			<button type="submit" name="tx_indexedsearch_pi2[search][submitButton]">{$page.search.defaultSubmitValue}</button>
 		  )
 		 
 		  40 = TEXT
 		  40.value = </form>
 		}
-
-
-	### Recherche indexée ###
-	config {
-	  index_enable = 1
-	  index_externals = 1
-
-	}
-	plugin.tx_indexedsearch {
-	   search {
-		 # TSFE:id is always the current page
-		 targetPid.data = TSFE:id
-	   }
-	   templateFile = EXT:t3_cancon/Resources/Private/Templates/Search/Search.html
-	   show.rules = 0
-	   show.advancedSearchLink = 0
-	   show.parsetimes = 0
-	   show.L1sections = 1
-	   show.L2sections = 1
-	   show.LxALLtypes = 0
-	   show.resultNumber = 1
-	}

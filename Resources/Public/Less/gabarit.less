@@ -179,7 +179,18 @@ footer{
      background: -ms-linear-gradient(90deg, @navbar-gradient1 45%, @navbar-gradient2 65%);
      background: linear-gradient(180deg, @navbar-gradient1 45%, @navbar-gradient2 65%);
    }
+   form{
+	 margin-top: @navbar-height / 2;
+   }
 }
+
+@media (min-width: 992px) {
+ .navbar-top{
+	 .navbar-main {
+	   float: left;
+	  }
+  }
+} 
 
 
 /*
@@ -202,4 +213,15 @@ footer.wrapper > .container {
 
 header + div.wrapper > .container{
     padding: 0;
+}
+
+
+/*
+ * Champ de recherche
+ * --------------------------------------------------
+ */
+
+.search-right {
+    margin-top: 15px;
+    text-align: center;
 }

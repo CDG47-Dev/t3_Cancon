@@ -45,4 +45,5 @@ Ne pas oublier dans le fichier Resources/Private/Layouts/Page/Default.html de fa
 	* couleur de fond
 	* couleur de fond du sous-menu
 	* couleur de la bordure
-
+* Champ de recherche
+	* 2 positions : dans le menu principal à droite ou dans la colonne de droite

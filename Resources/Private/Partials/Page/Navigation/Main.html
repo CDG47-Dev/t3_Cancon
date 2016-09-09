@@ -54,6 +54,13 @@
                         </li>
                     </f:for>
                 </ul>
+				<f:if condition="{showSearchRight} == 0">
+					<f:then>
+						<div class="navbar-form navbar-right">
+							<f:cObject typoscriptObjectPath="lib.search"/>
+						</div>
+					</f:then>
+				</f:if>
             </nav>
         </f:if>
     </div>
