@@ -10,8 +10,18 @@ config {
 	//Search Settings
 	index_enable = 1
     index_externals = 1
+	
+	//Cible lien externe
+	extTarget = _blank
+	
+    //Realurl
+    tx_realurl_enable = {$config.realurl}
+
+	//Domaine
+	baseURL = {$config.baseURL}
 
 }
+
 page = PAGE
 page{
 
@@ -70,6 +80,8 @@ page{
 			 showLogoLeft.value = {$page.logo.positionGauche}
 			 showSearchRight = TEXT
 			 showSearchRight.value = {$page.search.positionDroite}
+			 showSitemapFooter = TEXT
+			 showSitemapFooter.value = {$page.theme.footersitemap.enable}			 
 			 
 		 }		
 	}
@@ -208,3 +220,11 @@ page{
 		  40 = TEXT
 		  40.value = </form>
 		}
+		
+	#### Google Site Map
+	tx_ddgooglesitemap.forceStartPid = {$config.googlesitemap.rootUid}
+
+	#### News
+	[userFunc = TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('news')]
+	<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3_cancon/Configuration/TypoScript/Extension/News.txt">
+	[global]
