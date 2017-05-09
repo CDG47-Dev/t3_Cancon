@@ -17,7 +17,7 @@ Usage et Parametrage
 ==================================================
 
 Pour cette extension, des constantes sont utilisés pour faciliter le parametrage et les modifications de contenus en fonction des besoins.
-On les retrouvent au chemin suivant : t3_Serignac/Configuration/TypoScript/constants.txt
+On les retrouvent au chemin suivant : t3_Cancon/Configuration/TypoScript/constants.txt
 
 
 * Le bandeau : - Création d'une page Bandeau de type Carousel qui va contenir un ou plusieurs Carousel Item.
